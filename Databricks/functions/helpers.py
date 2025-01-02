@@ -1,7 +1,11 @@
 # Databricks notebook source
 def mount_aws_s3_bucket(AWS_S3_BUCKET, KEY_FILE):
 
-    import spark
+    from pyspark.sql import SparkSession
+
+    # Initialize the Spark session (if not already available)
+    spark = SparkSession.builder.appName("tmp").getOrCreate()
+
     # extract aws credentials from hidden table 
     aws_keys_df = spark.read.format("csv").option("header", "true").option("sep", ",").load(KEY_FILE)
 
