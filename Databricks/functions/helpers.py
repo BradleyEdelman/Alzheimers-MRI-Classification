@@ -1,4 +1,6 @@
 # Databricks notebook source
+from databricks.sdk.runtime import *
+
 def mount_aws_s3_bucket(spark, AWS_S3_BUCKET, KEY_FILE):
 
     # extract aws credentials from hidden table 
