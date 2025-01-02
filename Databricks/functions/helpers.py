@@ -1,5 +1,5 @@
 # Databricks notebook source
-def mount_aws_s3_bucket(AWS_S3_BUCKET, KEY_FILE)
+def mount_aws_s3_bucket(AWS_S3_BUCKET, KEY_FILE):
 
     # extract aws credentials from hidden table 
     aws_keys_df = spark.read.format("csv").option("header", "true").option("sep", ",").load(KEY_FILE)
@@ -16,6 +16,8 @@ def mount_aws_s3_bucket(AWS_S3_BUCKET, KEY_FILE)
     if any(mount.mountPoint == MOUNT_NAME for mount in dbutils.fs.mounts()):
         print(f"{MOUNT_NAME} is already mounted.")
         return
-    else
+    else:
         dbutils.fs.mount(SOURCE_URL, MOUNT_NAME, extra_configs = EXTRA_CONFIGS)
         print(f"{MOUNT_NAME} is now mounted.")
+
+    return MOUNT_NAME
