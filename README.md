@@ -4,6 +4,7 @@ This repository contains a series of Jupyter notebooks focused on classifying Al
 ## Dataset
 https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset <br />
 
+
 # Notebooks
 ## 00 Data Cleaning
 This notebook covers data cleaning techniques, addressing class imbalance, and applying Principal Component Analysis (PCA) for dimensionality reduction. <br />
@@ -17,8 +18,10 @@ This notebook implements a custom Convolutional Neural Network (CNN) architectur
 ## 03 ResNet50 Transfer Learning
 This notebook utilizes the ResNet50 model, which is fine-tuned (transfer learning) to improve classification accuracy. <br />
 
+
 # Requirements
-To reproduce this project, see the dependencies in the requirements.txt file
+To reproduce this project, see the dependencies in the requirements.txt file <br />
+
 
 # License
 This project is licensed under the MIT License - see the LICENSE file for details.
