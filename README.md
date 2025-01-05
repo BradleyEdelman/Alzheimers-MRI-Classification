@@ -1,5 +1,8 @@
 # Alzheimer's Disease Classification from Anatomical MRI Images
-This repository contains a series of Jupyter notebooks focused on classifying Alzheimer's disease (AD) using anatomical MRI images. The project explores various machine learning models and strategies for data exploration, preprocessing, and model evaluation. All notebooks were executed on Databricks with AWS EC2 instances.
+This repository contains a series of Jupyter notebooks focused on classifying Alzheimer's disease (AD) using anatomical MRI images. The project explores various machine learning models and strategies for data exploration, preprocessing, and model evaluation. All notebooks were executed on Databricks with AWS EC2 instances. <br />
+
+## Dataset
+https://www.kaggle.com/datasets/borhanitrash/alzheimer-mri-disease-classification-dataset <br />
 
 # Notebooks
 ## 00 Data Cleaning
