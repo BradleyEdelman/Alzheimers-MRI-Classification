@@ -15,7 +15,7 @@ This notebook applies a random forest classifier to classify Alzheimer's disease
 This notebook implements a custom convolutional neural network (CNN) to classify Alzheimer's disease from anatomical MRI images. It explores hyperparameter tuning to optimize model performance and applies a distributed training strategy using TensorFlow's MirroredStrategy to accelerate training. <br />
 
 ## 03 ResNet50 Transfer Learning
-This notebook utilizes the ResNet50 model, which is fine-tuned (transfer learning) to improve classification accuracy. <br /> <br />
+This notebook utilizes the ResNet50 model, which is fine-tuned (transfer learning) to improve classification accuracy. Prediction accuracy and complexity metrics are also explored as a function of model pruning. <br /> <br />
 
 # Requirements
 To reproduce this project, see the dependencies in the requirements.txt file <br /> <br />
