@@ -14,6 +14,7 @@ def dict_to_image(image_dict):
     Raises:
     TypeError: If the input is not a dictionary with a 'bytes' key.
     """
+    
     if isinstance(image_dict, dict) and 'bytes' in image_dict:
         byte_string = image_dict['bytes']
         nparr = np.frombuffer(byte_string, np.uint8)
