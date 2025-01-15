@@ -11,11 +11,43 @@ This notebook prepares the dataset for Alzheimer's Disease Classification by acc
 ## 01 Random Forest
 This notebook applies a random forest classifier to classify Alzheimer's disease from anatomical MRI images using a low-dimensional feature space. Key steps include data formatting and quality checks, feature extraction and visualization, and permutation testing for statistical significance using parallel processing. It also explores feature importance and interpretation. <br />
 
-## 02 CNN
+## 02 Custom CNN
 This notebook implements a custom convolutional neural network (CNN) to classify Alzheimer's disease from anatomical MRI images. It explores hyperparameter tuning to optimize model performance and applies a distributed training strategy using TensorFlow's MirroredStrategy to accelerate training. <br />
 
 ## 03 ResNet50 Transfer Learning
-This notebook utilizes the ResNet50 model, which is fine-tuned (transfer learning) to improve classification accuracy. Prediction accuracy and complexity metrics are also explored as a function of model pruning. <br /> <br />
+This notebook utilizes the ResNet50 model, which is fine-tuned (transfer learning) to improve classification accuracy. Prediction accuracy and complexity metrics are also explored as a function of model pruning. <br />
+
+## 04 Model Explainability
+This notebook explores the explainability of a fine-tuned ResNet50 network by computing SHapley Additive exPlanations (SHAP) values. Here, SHAP visualizations are utilized to identify key spatial features of AD progression, investigate misclassifications, perform cluster analyses, and validate model focus and reliability. <br /> <br />
+
+# File Tree
+```
+Alzheimers-MRI-Classification/
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── notebooks/
+│   ├── 00_data_cleaning
+│   ├── 01_random_forest
+│   ├── 02_custom_CNN
+│   ├── 03_ResNet50_transfer_learning
+│   └──04_model_explainability
+│
+├── results/
+│
+├── src/
+│   ├── custom_pruning.py
+│   ├── data_io.py
+│   ├── img_preprocessing.py
+│   ├── random_forest_permute.py
+│   └── visualize.py
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+```
 
 # Requirements
 To reproduce this project, see the dependencies in the requirements.txt file <br /> <br />
