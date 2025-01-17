@@ -53,7 +53,7 @@ Explores the explainability of the fine-tuned ResNet50 model using SHapley Addit
 ### Model Performance
 This section briefly summarizes the performance of the different models and approaches used in the project:
 
-- **Random Forest**: Achieved an plateuing accuracy of ~90% when using >35 PC features.
+- **Random Forest**: Achieved a maximum accuracy of 91.59% when using 50 PC features, but was consistently above 90% with as few as 30 PC features.
 - **Custom CNN**: Achieved an accuracy of 95.55% with optimized hyperparameters, but suffered from class-specific biases
 - **ResNet50 (Transfer Learning)**: Achieved an accuracy of 95.86% after fine-tuning with more explainable misclassification instances (i.e. confusion matrices).
 
@@ -72,7 +72,7 @@ Alzheimers-MRI-Classification/
 │   ├── 01_random_forest
 │   ├── 02_custom_CNN
 │   ├── 03_ResNet50_transfer_learning
-│   └──04_model_explainability
+│   └── 04_model_explainability
 │
 ├── src/
 │   ├── custom_pruning.py
