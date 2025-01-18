@@ -21,3 +21,4 @@ notebooks/00_Data_Cleaning.ipynb
 notebooks/02_custom_CNN.ipynb
 notebooks/03_ResNet50_transfer_learning.ipynb
 notebooks/01_random_forest.ipynb
+notebooks/04_model_explainability.ipynb
