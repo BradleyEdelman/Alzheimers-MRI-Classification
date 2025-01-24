@@ -2,7 +2,7 @@
 
 ### Project Overview
 
-This repository contains a series of notebooks aimed at classifying Alzheimer's Disease (AD) from anatomical MRI images. The project explores various machine learning techniques, including traditional models like Random Forest, and deep learning approaches such as CNNs and transfer learning.
+This project aims to classify four stages of Alzheimer's Disease (AD) from anatomical MRI images. The project explores various machine learning techniques, including traditional models like Random Forest, and deep learning approaches such as CNNs and transfer learning.
 
 #### Highlights:
 - **Data Exploration & Preprocessing**: Checking data quality, dimensionality reduction via PCA, and addressing class imbalances.
@@ -51,8 +51,8 @@ Explores the explainability of the fine-tuned ResNet50 model using SHapley Addit
 This section briefly summarizes the performance of the different models and approaches used in this project:
 
 - **Random Forest**: Achieved a maximum accuracy of 91.59% when using 50 PC features, but was consistently above 90% with as few as 30 PC features.
-- **Custom CNN**: Achieved an accuracy of 95.55% with optimized hyperparameters, but suffered from class-specific biases
-- **ResNet50 (Transfer Learning)**: Achieved an accuracy of 95.86% after fine-tuning with more explainable misclassification instances (i.e. confusion matrices).
+- **Custom CNN**: Achieved an accuracy of 95.55% with optimized hyperparameters, but suffered from class-specific biases.
+- **ResNet50 (Transfer Learning)**: Achieved an accuracy of 95.86% after fine-tuning the ResNet50 model, and produced more explainable misclassification instances (i.e. confusion matrices).
 
 ### Key Insights
 - **Model Interpretability**: Spatial PC maps and SHAP values facilitated the identification of brain areas implicated in the progression of AD. These visualization tools also validated the models' focus on relevant features available via non-invasive MRI. <br /> <br />
