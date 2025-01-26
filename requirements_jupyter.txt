@@ -1,14 +1,15 @@
 numpy==1.26.4
 matplotlib==3.8.4
-pandas==1.5.3
+pandas==2.2.3
 scikit-learn==1.4.2
 tensorflow==2.18.0
 imblearn
 dask==2024.12.1
+distributed==2025.1.0
 seaborn
-# libmagic
-# python-magic
 opencv-python
+keras_tuner==1.4.7
+
 notebook==7.3.2
 pathlib==1.0.1
 pyarrow==19.0.0
