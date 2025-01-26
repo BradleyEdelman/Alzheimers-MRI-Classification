@@ -1,0 +1,17 @@
+# Exclude Databricks files
+notebooks_databricks/
+requirements_databricks.txt
+
+# Exclude local virtual environment
+venv/
+
+# Exclude Git-related files
+.git
+.gitignore
+
+# Exclude results (optional, if you want them in Docker for testing)
+results/
+notebooks_jupyter/my_dir/AD_class/
+
+
+.pytest_cache

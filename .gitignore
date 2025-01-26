@@ -1,2 +1,16 @@
+# Ignore virtual environments
+venv/
+
+# Ignore large data that doesn't need to be tracked
+data/raw/
+
+# Ignore Jupyter notebook outputs (if you want to)
+.ipynb_checkpoints
+
+# ignore databricks files
+.databricks
+
+# Ignore results (optional if you want to avoid versioning them)
 results/
-notebooks/my_dir/AD_class/
+notebooks_databricks/my_dir/AD_class/
+notebooks_jupyter/my_dir/AD_class/

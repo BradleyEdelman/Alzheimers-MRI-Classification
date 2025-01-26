@@ -1,0 +1,15 @@
+numpy==1.26.4
+matplotlib==3.8.4
+pandas==1.5.3
+scikit-learn==1.4.2
+tensorflow==2.18.0
+imblearn
+dask==2024.12.1
+seaborn
+# libmagic
+# python-magic
+opencv-python
+notebook==7.3.2
+pathlib==1.0.1
+pyarrow==19.0.0
+# pip freeze > requirements.txt
