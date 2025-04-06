@@ -18,25 +18,28 @@ The dataset used for this project contains labeled anatomical MRI images for AD 
 ### 00 Data Cleaning
 Prepares the dataset for classification by:
 - Accessing Parquet data from an AWS S3 bucket
-- Addressing class imbalance using synthetic data generation techniques
-- Formatting and standardizing data for evaluation and cross-validation <br />
+- Formatting and standardizing training data
+- Assessing different approaches to address class imbalance (e.g. synthetic data generation, augmentation)
+- Preprocessing test data for evaluation and cross-validation <br />
 
 ### 01 Random Forest
 Utilizes a Random Forest to classify AD, with steps that include:
 - Applying Principal Component Analysis (PCA) for dimensionality reduction and feature extraction
 - Cross-validation of classification results
+- Hyperparameter tuning
 - Permutation testing for statistical significance using parallel processing
 - Exploring feature importance <br />
 
 ### 02 Custom CNN
 Develops a custom convolutional neural network (CNN) to classify AD, focusing on:
-- Hyperparameter tuning to optimize model performance
+- Class weighting to address class imbalance
+- Hyperparameter tuning
 - Distributed training using TensorFlow's MirroredStrategy
 - The effect of class imbalance on class-specific classification accuracy <br />
 
 ### 03 ResNet50 Transfer Learning
 Implements transfer learning with the ResNet50 model, exploring:
-- Fine-tuning to improve classification accuracy
+- Fine-tuning the model to improve classification accuracy (with class weighting)
 - Prediction accuracy and complexity metrics as a function of model pruning <br />
 
 ### 04 Model Explainability
@@ -61,15 +64,21 @@ This section briefly summarizes the performance of the different models and appr
 ```
 Alzheimers-MRI-Classification/
 ├── data/
-│   ├── raw/
-│   └── processed/
+│   └── raw/
 │
-├── notebooks/
-│   ├── 00_data_cleaning
-│   ├── 01_random_forest
-│   ├── 02_custom_CNN
-│   ├── 03_ResNet50_transfer_learning
-│   └── 04_model_explainability
+├── notebooks_databricks/
+│   ├── 00_data_cleaning.ipynb
+│   ├── 01_random_forest.ipynb
+│   ├── 02_custom_CNN.ipynb
+│   ├── 03_ResNet50_transfer_learning.ipynb
+│   └── 04_model_explainability.ipynb
+│
+├── notebooks_jupyter/
+│   ├── 00_data_cleaning_jupyter.ipynb
+│   ├── 01_random_forest_jupyter.ipynb
+│   ├── 02_custom_CNN_jupyter.ipynb
+│   ├── 03_ResNet50_transfer_learning_jupyter.ipynb
+│   └── 04_model_explainability_jupyter.ipynb
 │
 ├── src/
 │   ├── custom_pruning.py
@@ -78,11 +87,34 @@ Alzheimers-MRI-Classification/
 │   ├── random_forest_permute.py
 │   └── visualize.py
 │
+├── .dockerignore
+├── .gitattributes
 ├── .gitignore
+├── dockerfil
 ├── LICENSE
 ├── README.md
-├── requirements.txt
+├── requirements_databricks.txt
+├── requirements_jupyter.txt
 ```
+
+## Running with Docker
+To run this project in an isolated environment using Docker:
+
+### Build the image:
+```bash
+docker build -t ad-mri-classification .
+```
+
+### Run the container:
+```bash
+docker run -p 8888:8888 ad-mri-classification
+```
+
+This launches a Jupyter notebook server at http://localhost:8888 where you can explore and run the notebooks_jupyter directory
+
+Notes:
+- The container installs all necessary dependencies using `requirements_jupyter.txt`
+- The data/ folder is included in the image since the raw parquet files are quite small.
 
 ## Requirements
 To reproduce this project, see the dependencies in the requirements.txt file <br /> <br />

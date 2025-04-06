@@ -2,16 +2,29 @@
 notebooks_databricks/
 requirements_databricks.txt
 
-# Exclude local virtual environment
-venv*/
+# Prevent copying Docker artifacts into the image
+*.tar
+*.img
+*.iso
 
-# Exclude Git-related files
+# Ignore local config files
+.env
+*.env
+.vscode/
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+venv*/
+.env/
+.venv/
+
+# Ignore dataset folders (optional if they're large or private)
+data/
+results/
+
+# Ignore Git and OS clutter
 .git
 .gitignore
-
-# Exclude results (optional, if you want them in Docker for testing)
-results/
-notebooks_jupyter/my_dir/AD_class/
-
-
-.pytest_cache
+.gitattributes
+.DS_Store
