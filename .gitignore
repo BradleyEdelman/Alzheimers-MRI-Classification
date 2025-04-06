@@ -1,5 +1,5 @@
 # Ignore virtual environments
-venv/
+venv*/
 
 # Ignore large data that doesn't need to be tracked
 data/raw/

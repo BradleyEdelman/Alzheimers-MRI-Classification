@@ -5,8 +5,8 @@
 This project aims to classify four stages of Alzheimer's Disease (AD) from anatomical MRI images. This data was obtained from an open source dataset containing images of individual slices rather than whole-brain information. Furthermore, the data was provided in what I assume is a pre-processed and registered format, however, the toolboxes and steps used to process the raw dicom/nifti files is unknown to me. Nevertheless, I think this is still a decent open-source dataset to demonstrate various machine learning techniques, including traditional models like Random Forest, and deep learning approaches such as CNNs and transfer learning.
 
 #### Highlights:
-- **Data Exploration & Preprocessing**: Checking data quality, dimensionality reduction via PCA, and addressing class imbalances.
-- **Modeling & Evaluation**: Training and evaluating multiple ML models, with complementary techniques such as permutation testing, hyperparameter tuning, and transfer learning.
+- **Data Exploration & Preprocessing**: Checking data quality, dimensionality reduction via PCA, and examining potential solutions to class imbalance.
+- **Modeling & Evaluation**: Training and evaluating multiple ML models, with complementary techniques such as class weighting, permutation testing, hyperparameter tuning, and transfer learning.
 - **Model Explainability**: Using PCA maps and SHAP values to interpret model predictions and identify key features of AD progression.
 - **Infrastructure**: Executed on Databricks with AWS EC2 for scalable computing and parallel processing.
 

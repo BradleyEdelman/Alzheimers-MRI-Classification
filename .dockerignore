@@ -3,7 +3,7 @@ notebooks_databricks/
 requirements_databricks.txt
 
 # Exclude local virtual environment
-venv/
+venv*/
 
 # Exclude Git-related files
 .git

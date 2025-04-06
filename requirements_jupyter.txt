@@ -1,10 +1,10 @@
 numpy==1.26.4
 matplotlib==3.8.4
 pandas==2.2.3
-scikit-learn==1.4.2
+scikit-learn==1.6.1
 tensorflow==2.18.0
 imblearn
-dask==2024.12.1
+dask==2025.1.0
 distributed==2025.1.0
 seaborn
 opencv-python
