@@ -53,9 +53,9 @@ Explores the explainability of the fine-tuned ResNet50 model using SHapley Addit
 ### Model Performance
 This section briefly summarizes the performance of the different models and approaches used in this project:
 
-- **Random Forest**: Achieved a maximum accuracy of 91.59% when using 50 PC features, but was consistently above 90% with as few as 30 PC features.
-- **Custom CNN**: Achieved an accuracy of 95.55% with optimized hyperparameters, but suffered from class-specific biases.
-- **ResNet50 (Transfer Learning)**: Achieved an accuracy of 95.86% after fine-tuning the ResNet50 model, and produced more explainable misclassification instances (i.e. confusion matrices).
+- **Random Forest**: Exhibited a plateauing increase in classification accuracy as a function of PC features used. Accuracy was consistently above 90% with when using ~30-50 features.
+- **Custom CNN**: Achieved an accuracy of >96% with optimized hyperparameters and class weighting. While these two techniques did not dramatically improve or change over accuracy, they did help alleviate class-specific biases.
+- **ResNet50 (Transfer Learning)**: Achieved an accuracy of >96% after fine-tuning the ResNet50 model with class weighting, however, resulted in lower class-specific F1 scores compared to the class-weighted and fine tuned custom CNN.
 
 ### Key Insights
 - **Model Interpretability**: Spatial PC maps and SHAP values facilitated the identification of brain areas implicated in the progression of AD. These visualization tools also validated the models' focus on relevant features available via non-invasive MRI. <br /> <br />
@@ -90,7 +90,7 @@ Alzheimers-MRI-Classification/
 ├── .dockerignore
 ├── .gitattributes
 ├── .gitignore
-├── dockerfil
+├── dockerfile
 ├── LICENSE
 ├── README.md
 ├── requirements_databricks.txt
@@ -117,7 +117,7 @@ Notes:
 - The data/ folder is included in the image since the raw parquet files are quite small.
 
 ## Requirements
-To reproduce this project, see the dependencies in the requirements.txt file <br /> <br />
+To reproduce this project, see the dependencies in the requirements_jupyter.txt (and/or requirements_databricks.txt) file <br /> <br />
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
