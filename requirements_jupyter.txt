@@ -13,4 +13,5 @@ keras_tuner==1.4.7
 notebook==7.3.2
 pathlib==1.0.1
 pyarrow==19.0.0
+shap==0.47.1
 # pip freeze > requirements.txt
